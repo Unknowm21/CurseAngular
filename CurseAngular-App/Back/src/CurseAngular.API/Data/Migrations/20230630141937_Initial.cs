@@ -5,7 +5,7 @@
 namespace CurseAngular.API.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class initialMigration : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,12 +16,12 @@ namespace CurseAngular.API.Data.Migrations
                 {
                     EventoId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Local = table.Column<string>(type: "TEXT", nullable: false),
-                    DataEvento = table.Column<string>(type: "TEXT", nullable: false),
-                    Tema = table.Column<string>(type: "TEXT", nullable: false),
-                    QtdPessoas = table.Column<int>(type: "INTEGER", nullable: false),
-                    Lote = table.Column<string>(type: "TEXT", nullable: false),
-                    ImagemURL = table.Column<string>(type: "TEXT", nullable: false)
+                    Local = table.Column<string>(type: "TEXT", nullable: true),
+                    DataEvento = table.Column<string>(type: "TEXT", nullable: true),
+                    Tema = table.Column<string>(type: "TEXT", nullable: true),
+                    QtdPessoas = table.Column<int>(type: "INTEGER", nullable: true),
+                    Lote = table.Column<string>(type: "TEXT", nullable: true),
+                    ImagemURL = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
