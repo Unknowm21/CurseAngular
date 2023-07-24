@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Back.src.CurseAngular.API.Data;
-using Back.src.CurseAngular.API.Models;
+using CurseAngular.Persistence;
+using CurseAngular.Domain;
 
 namespace Back.src.CurseAngular.API.Controllers
 {
@@ -14,9 +14,9 @@ namespace Back.src.CurseAngular.API.Controllers
     [Route("api/[controller]")]
     public class EventosController : ControllerBase
     {        
-        private readonly DataContext _context;
+        private readonly CurseAngularContext _context;
       
-        public EventosController(DataContext context)
+        public EventosController(CurseAngularContext context)
         {
             _context = context;
         }
